@@ -6,7 +6,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // "Line-through" effect
     let elements = document.getElementsByClassName("line-through");
-    [].forEach.call(elements, function(element) {
+    [].forEach.call(elements, (element) => {
         const color = element.style.color;
         if (color) { element.innerHTML = "<span style='color:" + color + "'>" + element.innerText + "</span>"; }
         element.style.color = "black";
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Bullet effect
     elements = document.getElementsByClassName("bullet-large");
-    [].forEach.call(elements, function(element) {
+    [].forEach.call(elements, (element) => {
         element.style.marginRight = '0';
         element.style.marginBottom = '0';
         element.style.marginLeft = "12pt";
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     elements = document.getElementsByClassName("bullet-small");
-    [].forEach.call(elements, function(element) {
+    [].forEach.call(elements, (element) => {
         element.style.marginRight = '0';
         element.style.marginBottom = '0';
         element.style.marginLeft = "11pt";
@@ -34,15 +34,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Math equations
     elements = document.getElementsByClassName("math");
-    [].forEach.call(elements, function(element) {
-        console.log(element.getAttribute("class"));
+    [].forEach.call(elements, (element) => {
         const formula = element.innerText;
         const top = element.style.top;
         const color = element.getAttribute("class").replace("math", '').trim();
-        element.outerHTML = "<img style='border:none;margin:0;padding:0;vertical-align:baseline;position:relative;" +
+        const verticalAlign = element.style.verticalAlign;
+        element.innerHTML = "<img style='border:none;margin:0;padding:0;vertical-align:" +
+            (verticalAlign ? verticalAlign + ';' : "baseline;") + "position:relative;" +
             (top ? "top:" + top + ';' : '') +
             "' alt='" + formula +
             "' src='https://latex.codecogs.com/svg.latex?\\boldsymbol{\\color{" +
             (color ? color : "Black") + "}{" + formula + "}}'>";
+        element.style.cssText = "border:none;margin:0;padding:0;";
     });
 });
