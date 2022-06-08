@@ -1,0 +1,49 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 2.6 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style="display: block; margin: 0; padding: 0; font: normal normal 11pt/150% Verdana,sans-serif; color: black; text-align: left;">
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 2 - Question 6</strong> <span style="color: orangered;">(<strong>4</strong> Points)</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 0; padding: 0;">Please write a Python program which has the following functionality in execution:</p>
+    <p style="margin: 12pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Ask the user to enter a <strong>10</strong>-digit U.S. phone number <span style="color: orangered;">(e.g., 6369228561)</span> <strong style="color: red;">without</strong> any formatting.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Format the user input phone number as <em>area code</em>, <em>prefix</em>, and <em>line number</em> <span style="color: orangered;">(e.g., (636) 922-8561)</span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Show the formatted phone number in the console.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your can assume that the user will always provide valid input values.&nbsp; You do <strong style="color: red;">not</strong> need to worry about <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">invalid input</span></span> or <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">error handling</span></span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your program will be tested <span style="color:orangered;">(graded)</span> using multiple sets of valid input values.&nbsp; As long as the input values are valid, your program should always generate correct output values.</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'><span style="color: #080808;">phone_num = </span><span style="color: navy;">input</span><span style="color: #080808;">(</span><span style="color: #067d17;">"Please enter a 10-digit phone number: "</span><span style="color: #080808;">)<br />digits = </span><span style="color: navy;">list</span><span style="color: #080808;">(phone_num)<br /></span><span style="color: navy;">print</span><span style="color: #080808;">(</span><span style="color: #067d17;">'(' </span><span style="color: #080808;">+ digits[</span><span style="color: #1750eb;">0</span><span style="color: #080808;">] + digits[</span><span style="color: #1750eb;">1</span><span style="color: #080808;">] + digits[</span><span style="color: #1750eb;">2</span><span style="color: #080808;">] + </span><span style="color: #067d17;">") " </span><span style="color: #080808;">+ digits[</span><span style="color: #1750eb;">3</span><span style="color: #080808;">] + digits[</span><span style="color: #1750eb;">4</span><span style="color: #080808;">]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + digits[</span><span style="color: #1750eb;">5</span><span style="color: #080808;">] + </span><span style="color: #067d17;">'-' </span><span style="color: #080808;">+ digits[</span><span style="color: #1750eb;">6</span><span style="color: #080808;">] + digits[</span><span style="color: #1750eb;">7</span><span style="color: #080808;">] + digits[</span><span style="color: #1750eb;">8</span><span style="color: #080808;">] + digits[</span><span style="color: #1750eb;">9</span><span style="color: #080808;">])</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
