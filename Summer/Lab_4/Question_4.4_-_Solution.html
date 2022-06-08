@@ -1,0 +1,187 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4.4 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style='display:block;margin:0;padding:0;font:normal normal 11pt/150% Verdana,sans-serif;color:black;text-align:left;'>
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 4 - Question 4</strong> <span style="color:orangered;">(<strong>4</strong> Points)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin:0;padding:0;">
+        Some integers are stored in a <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>list</strong> variable <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong>.&nbsp; Please write some code to test whether <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> is sorted or not.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> could be empty, which is considered a sorted list.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>No matter <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> is sorted increasingly or decreasingly, it is considered a sorted list.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Your code writes <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"sorted"</strong> in the console if <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> is sorted; <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"unsorted"</strong> otherwise.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please see the examples below to better understand the expected program behavior.</p>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 1</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Values in <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>my_list</strong>
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>1</strong>, <strong>1</strong>, <strong>3</strong>, <strong>5</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Program Output
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>"sorted"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                The list is sorted <strong style="color:red;">non</strong>-decreasingly <span style="color:orangered;">(increasingly)</span>.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:14pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 2</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Values in <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>my_list</strong>
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>9</strong>, <strong>2</strong>, <strong>&minus;1</strong>, <strong>&minus;1</strong>, <strong>&minus;10</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Program Output
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>"sorted"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                The list is sorted <strong style="color:red;">non</strong>-increasingly <span style="color:orangered;">(decreasingly)</span>.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 3</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Values in <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>my_list</strong>
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>3</strong>, <strong>3</strong>, <strong>3</strong>, <strong>3</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Program Output
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>"sorted"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                The list is sorted <strong style="color:red;">non</strong>-decreasingly  and <strong style="color:red;">non</strong>-increasingly.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 4</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Values in <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>my_list</strong>
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>2</strong>, <strong>6</strong>, <strong>3</strong>, <strong>1</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Program Output
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>"unsorted"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                The list is <strong style="color:red;">not</strong> sorted.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 10pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your can assume that the values stored in <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> are always valid.&nbsp; You do <strong style="color: red;">not</strong> need to worry about <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">invalid values</span></span> or <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">error handling</span></span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your program will be tested <span style="color:orangered;">(graded)</span> using multiple sets of valid input values.&nbsp; As long as the input values are valid, your program should always generate correct output values.</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'>
+                <span style="color:#8c8c8c;"># Create a copy of non-decreasingly sorted list.<br /></span><span style="color:#080808;">sorted_list = </span><span style="color:navy;">sorted</span><span style="color:#080808;">(my_list)<br /><br /></span><span style="color:#8c8c8c;"># Create a copy of non-increasingly sorted list,<br /># which is the reverse of the non-decreasingly sorted list.<br /></span><span style="color:#080808;">reversely_sorted_list = sorted_list[::-</span><span style="color:#1750eb;">1</span><span style="color:#080808;">]<br /><br /></span><span style="color:#8c8c8c;"># If either sorted list is the same as the original list,<br /># then the original list is sorted.<br /></span><span style="color:#0033b3;">if </span><span style="color:#080808;">sorted_list == my_list </span><span style="color:#0033b3;">or </span><span style="color:#080808;">reversely_sorted_list == my_list:<br />&nbsp;&nbsp;&nbsp; </span><span style="color:navy;">print</span><span style="color:#080808;">(</span><span style="color:#067d17;">"sorted"</span><span style="color:#080808;">)<br /></span><span style="color:#0033b3;">else</span><span style="color:#080808;">:<br />&nbsp;&nbsp;&nbsp; </span><span style="color:navy;">print</span><span style="color:#080808;">(</span><span style="color:#067d17;">"unsorted"</span><span style="color:#080808;">)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
