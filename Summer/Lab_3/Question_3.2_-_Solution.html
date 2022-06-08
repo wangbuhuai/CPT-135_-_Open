@@ -1,0 +1,80 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3.1 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style="display: block; margin: 0; padding: 0; font: normal normal 11pt/150% Verdana,sans-serif; color: black; text-align: left;">
+    <table style="border-collapse: collapse; border: none; margin: 0 0 16pt 0; line-height: normal; width: 100%; white-space: nowrap;">
+        <tbody>
+        <tr>
+            <td style="border: none; border-bottom: 3px solid #7f1428; padding: 0 0 1pt 0; vertical-align: middle; text-align: left; color: #7f1428; background: transparent;"><strong>Lab 3 - Question 2</strong> <span style="color: orangered;">(<strong>4</strong> Points)</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 0; padding: 0;">Please write a Python program which has the following functionality in execution:</p>
+    <p style="margin: 12pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Ask the user to enter a <strong style="color: red;">non</strong>-zero integer.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Determine whether the user input integer is <em>even</em> or <em>odd</em>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Determine whether the user input integer is <em>positive</em> or <em>negative</em>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Show the results in the console.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Please see the examples below to better understand the expected program behavior and output format.</p>
+    <table style="border-collapse: collapse; border: none; margin: 10pt 0 0 12pt; line-height: normal;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: white; background: darkcyan;" colspan="2"><strong>Example 1</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white; width: 175px;">User Input Value</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; color: black; background: white;"><strong style="font-family: Consolas,monaco,monospace; font-size: 11.5pt;">713</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;">Expected Program Output</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; color: black; background: #ffff99;"><strong style="font-family: Consolas,monaco,monospace; font-size: 11.5pt;">Positive<br />Odd</strong></td>
+        </tr>
+        </tbody>
+    </table>
+    <table style="border-collapse: collapse; border: none; margin: 14pt 0 0 12pt; line-height: normal;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: white; background: darkcyan;" colspan="2"><strong>Example 2</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white; width: 175px;">User Input Value</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; color: black; background: white;"><strong style="font-family: Consolas,monaco,monospace; font-size: 11.5pt;">&minus;58</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;">Expected Program Output</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; color: black; background: #ffff99;"><strong style="font-family: Consolas,monaco,monospace; font-size: 11.5pt;">Negative<br />Even</strong></td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 10pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your can assume that the user will always provide valid input values.&nbsp; You do <strong style="color: red;">not</strong> need to worry about <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">invalid input</span></span> or <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">error handling</span></span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your program will be tested <span style="color:orangered;">(graded)</span> using multiple sets of valid input values.&nbsp; As long as the input values are valid, your program should always generate correct output values.</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'><span style="color: black;">num = </span><span style="color: #267f99;">int</span><span style="color: black;">(</span><span style="color: #795e26;">input</span><span style="color: black;">(</span><span style="color: #a31515;">"Please enter a non-zero integer: "</span><span style="color: black;">))<br /><br />sign = </span><span style="color: #a31515;">"Positive"</span><span style="color: black;"> </span><span style="color: #af00db;">if</span><span style="color: black;"> num &gt; </span><span style="color: #098658;">0</span><span style="color: black;"> </span><span style="color: #af00db;">else</span><span style="color: black;"> </span><span style="color: #a31515;">"Negative"</span><span style="color: black;"><br />odd_even = </span><span style="color: #a31515;">"Odd"</span><span style="color: black;"> </span><span style="color: #af00db;">if</span><span style="color: black;"> num % </span><span style="color: #098658;">2</span><span style="color: black;"> == </span><span style="color: #098658;">1</span><span style="color: black;"> </span><span style="color: #af00db;">else</span><span style="color: black;"> </span><span style="color: #a31515;">"Even"</span><span style="color: black;"><br /><br /></span><span style="color: #795e26;">print</span><span style="color: black;">(</span><span style="color: #a31515;">"</span><span style="color: blue;">%s</span><span style="color: #ee0000;">\n</span><span style="color: blue;">%s</span><span style="color: #a31515;">"</span><span style="color: black;"> % (sign, odd_even))</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
