@@ -1,0 +1,107 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5.5 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style='display:block;margin:0;padding:0;font:normal normal 11pt/150% Verdana,sans-serif;color:black;text-align:left;'>
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 5 - Question 5</strong> <span style="color:orangered;">(<strong>4</strong> Points)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin:0;padding:1pt 0;text-align: center;background:lightcyan;">
+        This is the most challenging question in this class🤔.
+    </p>
+    <p style="margin:16pt 0 0 0;padding:0;">
+        Please write a function that takes a list of integers as its only argument.&nbsp; The function finds and returns the <em>length of the longest increasing segment</em> in the list.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>You <strong style="color:red;">cannot</strong> assume <span style="color:orangered;">(or guess)</span> the size of the input list.&nbsp; In other words, no matter how many integers are stored in the input list, your function should correctly find the length of the longest increasing segment in it.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>If the input list is a <strong>constant</strong> list <span style="color:orangered;">(e.g., [<strong>4</strong>, <strong>4</strong>, <strong>4</strong>, <strong>4</strong>, <strong>4</strong>])</span> or <strong>decreasing</strong> list <span style="color:orangered;">(e.g., [<strong>20</strong>, <strong>15</strong>, <strong>9</strong>, <strong>2</strong>, <strong>&minus;2</strong>, <strong>&minus;18</strong>])</span>, then your function should return <strong>1</strong> <span style="color:orangered;">(<strong style="color:red;">not</strong> <span style="text-decoration: line-through;color:black;"><strong style="color:orangered;">0</strong></span>)</span>, since any element itself can be considered as an increasing segment of length <strong>1</strong>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>The input list is guaranteed to be <strong style="color:red;">non</strong>-empty but is <strong style="color:red;">not</strong> sorted in any way.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please see the example below to better understand the expected function behavior.</p>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Argument
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>1</strong>, <strong>0</strong>, <strong>2</strong>, <strong>5</strong>, <strong>&minus;3</strong>, <strong>0</strong>, <strong>0</strong>, <strong>4</strong>, <strong>8</strong>, <strong>12</strong>, <strong>10</strong>, <strong>16</strong>, <strong>14</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong>4</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;width:225px;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>int</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <p style="margin:0;padding:0;">
+                    There are <strong>4</strong> increasing segments in the input list <span style="color:orangered;">(shaded with different colors)</span>:
+                </p>
+                <p style="margin:6pt 0 0 0;padding:0;text-align: center;">
+                    [<strong>1</strong>, <span style="background:#ffff99;"><strong>0</strong>, <strong>2</strong>, <strong>5</strong></span>, <span style="background:lightgreen;"><strong>&minus;3</strong>, <strong>0</strong></span>, <span style="background:lightcyan;"><strong>0</strong>, <strong>4</strong>, <strong>8</strong>, <strong>12</strong></span>, <span style="background:gainsboro;"><strong>10</strong>, <strong>16</strong></span>, <strong>14</strong>]
+                </p>
+                <p style="margin:6pt 0 0 0;padding:0;">
+                    The longest increasing segment is <span style="background:lightcyan;"><strong>0</strong>, <strong>4</strong>, <strong>8</strong>, <strong>12</strong></span> which has length <strong>4</strong>.
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style='margin:10pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please only complete the required function.&nbsp; Do <strong style="color:red;">not</strong> write a <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>main()</strong> program</span> or any <span style="text-decoration: line-through;color:black;">testing code</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;color:darkcyan;'><span style='display:inline-block;width:6pt;'>&bull;</span>(Hint) The algorithm of <strong>finding the longest increasing segment</strong> is very similar to the algorithm of <strong>finding the maximum element</strong>.&nbsp; You need to keep a variable that stores the length of the longest increasing segment "seen so far".&nbsp; Then, use a loop to iterate through the input list.&nbsp; Every time when you find a longer increasing segment, you update the variable.&nbsp; After iterating through the list, the variable's value will be the answer.&nbsp; Good luck✌!</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'>
+                <span style="color:#0033b3;">def </span><span style="color:#00627a;">longest_increasing_segment</span><span style="color:#080808;">(li):<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Finds the length of the longest increasing segment in a list<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param li: a list to find the length of its longest increasing segment<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type li: List[int]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: length of the longest increasing segment in the list<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :rtype: int<br />&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#080808;">begin = </span><span style="color:#1750eb;">0&nbsp; </span><span style="color:#8c8c8c;"># Beginning index of current increasing segment<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#080808;">end = </span><span style="color:#1750eb;">0&nbsp; </span><span style="color:#8c8c8c;"># End index of current increasing segment<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#080808;">length = </span><span style="color:#1750eb;">1&nbsp; </span><span style="color:#8c8c8c;"># Length of current longest increasing segment<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">for </span><span style="color:#080808;">i </span><span style="color:#0033b3;">in </span><span style="color:navy;">range</span><span style="color:#080808;">(</span><span style="color:#1750eb;">1</span><span style="color:#080808;">, </span><span style="color:navy;">len</span><span style="color:#080808;">(li) + </span><span style="color:#1750eb;">1</span><span style="color:#080808;">):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">if </span><span style="color:#080808;">i &lt; </span><span style="color:navy;">len</span><span style="color:#080808;">(li) </span><span style="color:#0033b3;">and </span><span style="color:#080808;">li[i] &gt; li[i - </span><span style="color:#1750eb;">1</span><span style="color:#080808;">]:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># If current value is greater than the previous value,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # then current increasing segment is growing.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#080808;">end = i&nbsp; </span><span style="color:#8c8c8c;"># 'i' is the new end index.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">else</span><span style="color:#080808;">:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># If current value is smaller than the previous value,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # then a whole increasing segment is found.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#080808;">size = end - begin + </span><span style="color:#1750eb;">1<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># If the segment just found is longer than the longest seen so far,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # then "length" needs to be updated.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">if </span><span style="color:#080808;">size &gt; length:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; length = size<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># Initialize the next increasing segment.<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#080808;">begin = end = i<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">return </span><span style="color:#080808;">length</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
