@@ -1,0 +1,125 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4.5 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style='display:block;margin:0;padding:0;font:normal normal 11pt/150% Verdana,sans-serif;color:black;text-align:left;'>
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 4 - Question 5</strong> <span style="color:orangered;">(<strong>4</strong> Points)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin:0;padding:0;">
+        The <strong>median</strong> of a <strong style="color:red;">non</strong>-empty <strong>sorted</strong> list of integers is defined as below:
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>If the size of the list is an <strong>odd</strong> number, then the median of the list is just the <em>middle value</em>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>If the size of the list is an <strong>even</strong> number, then the median of the list is the <em>average of the middle two values</em>.</p>
+    <p style="margin:12pt 0 0 0;padding:0;">
+        Some integers are stored in a <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>list</strong> variable <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong>.&nbsp; Please write some code to find and show the median of <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> in the console.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> is guaranteed to be <strong style="color:red;">non</strong>-empty but my <strong style="color:red;">not</strong> be sorted.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>You should use <strong>integer division</strong> to calculate the average, if the size of the list is an even number.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please see the examples below to better understand the expected program behavior.</p>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 1</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Values in <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>my_list</strong>
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>10</strong>, <strong>2</strong>, <strong>8</strong>, <strong>4</strong>, <strong>7</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:175px;'>
+                Expected Program Output
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong>7</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                After sorting, the list becomes [<strong>2</strong>, <strong>4</strong>, <strong>7</strong>, <strong>8</strong>, <strong>10</strong>].&nbsp; The size of the list is <strong>5</strong> <span style="color:orangered;">(odd number)</span>, so the median is just the <em>middle value</em>, which is <strong>7</strong>.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:14pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 2</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Values in <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>my_list</strong>
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>10</strong>, <strong>2</strong>, <strong>20</strong>, <strong>8</strong>, <strong>120</strong>, <strong>40</strong>, <strong>800</strong>, <strong>30</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:175px;'>
+                Expected Program Output
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong>25</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                After sorting, the list becomes [<strong>2</strong>, <strong>8</strong>, <strong>10</strong>, <strong>20</strong>, <strong>30</strong>, <strong>40</strong>, <strong>120</strong>, <strong>800</strong>].&nbsp; The size of the list is <strong>8</strong> <span style="color:orangered;">(even number)</span>, so the median is the <em>average of the middle two values</em> <span style="color:orangered;">(<strong>20</strong> and <strong>30</strong>)</span>, which is <strong>25</strong>.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 10pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your can assume that the values stored in <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> are always valid.&nbsp; You do <strong style="color: red;">not</strong> need to worry about <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">invalid values</span></span> or <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">error handling</span></span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your program will be tested <span style="color:orangered;">(graded)</span> using multiple sets of valid input values.&nbsp; As long as the input values are valid, your program should always generate correct output values.</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6<br>7
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'>
+                <span style="color:#080808;">my_list.sort()&nbsp; </span><span style="color:#8c8c8c;"># Sort the list.<br /></span><span style="color:#080808;">n = </span><span style="color:navy;">len</span><span style="color:#080808;">(my_list)&nbsp; </span><span style="color:#8c8c8c;"># Size of the list<br /></span><span style="color:#0033b3;">if </span><span style="color:#080808;">n % </span><span style="color:#1750eb;">2 </span><span style="color:#080808;">== </span><span style="color:#1750eb;">1</span><span style="color:#080808;">:&nbsp; </span><span style="color:#8c8c8c;"># Odd<br />&nbsp;&nbsp;&nbsp; </span><span style="color:navy;">print</span><span style="color:#080808;">(my_list[n // </span><span style="color:#1750eb;">2</span><span style="color:#080808;">])&nbsp; </span><span style="color:#8c8c8c;"># Middle value<br /></span><span style="color:#0033b3;">else</span><span style="color:#080808;">:&nbsp; </span><span style="color:#8c8c8c;"># Even<br />&nbsp;&nbsp;&nbsp; # Median is the average of the middle two values.<br />&nbsp;&nbsp;&nbsp; </span><span style="color:navy;">print</span><span style="color:#080808;">((my_list[n // </span><span style="color:#1750eb;">2 </span><span style="color:#080808;">- </span><span style="color:#1750eb;">1</span><span style="color:#080808;">] + my_list[n // </span><span style="color:#1750eb;">2</span><span style="color:#080808;">]) // </span><span style="color:#1750eb;">2</span><span style="color:#080808;">)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
