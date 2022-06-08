@@ -1,0 +1,56 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 1.4 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style="display: block; margin: 0; padding: 0; font: normal normal 11pt/150% Verdana,sans-serif; color: black; text-align: left;">
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 1 - Question 4</strong> <span style="color: orangered;">(<strong>4</strong> Points)</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 0; padding: 0;">Please write a Python program to solve the following quantitative question.</p>
+    <table style="border-collapse: collapse; border: none; margin: 16pt auto 0 auto; line-height: 150%; width: 100%;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: whitesmoke;">The length of a piece of railway track is <strong>80</strong> feet <span style="color: orangered;">(fixed)</span>.&nbsp; The distance between two cities is <img style='border:none;margin:0;padding:0;vertical-align:middle;position:relative;top:-1px;' alt='D' src='https://latex.codecogs.com/svg.latex?\boldsymbol{\color{Black}{D}}'> miles <span style="color: orangered;">(input value)</span>.&nbsp; Therefore, how many pieces of railway track are needed to build a railroad between the two cities?</td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 16pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Ask the user to enter the <strong>distance</strong> <span style="color: orangered;">(in miles)</span> between two cities, which is an integer.&nbsp; Store the user input value in a variable.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Please note that the program user <strong style="color: red;">cannot</strong> see or understand your code.&nbsp; Therefore, you should provide sufficient <strong>screen prompts</strong> in the console to let the user clearly know what to input.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Calculate the number of pieces of railway track needed to build a railroad between the two cities.&nbsp; Is there any "pitfall" in this question?</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Show the calculation result <span style="color:orangered;">(number of railway tracks)</span> in the console, which should be an integer.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your can assume that the user will always provide valid input values.&nbsp; You do <strong style="color: red;">not</strong> need to worry about <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">invalid input</span></span> or <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">error handling</span></span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:blue;"><span style="display: inline-block; width: 6pt;">&bull;</span>Unit conversion: <strong>1</strong> mile = <strong>5,280</strong> feet</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong></td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'><span style="color: black;">unit_length = </span><span style="color: #098658;">80</span><span style="color: black;"><br />distance = int(input(</span><span style="color: #a31515;">"Please enter the distance between two cities: "</span><span style="color: black;">))<br />distance = distance * </span><span style="color: #098658;">5280</span><span style="color: black;">&nbsp; </span><span style="color: green;"># Unit conversion</span><span style="color: black;"><br /></span><span style="color: green;"># Pitfall: a railroad consists of parallel two tracks.</span><span style="color: black;"><br />num_of_pieces = distance // unit_length * </span><span style="color: #098658;">2</span><span style="color: black;"><br />print(</span><span style="color: #a31515;">"Number of pieces needed:"</span><span style="color: black;">, num_of_pieces)</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
