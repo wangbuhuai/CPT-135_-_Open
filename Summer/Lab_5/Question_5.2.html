@@ -1,0 +1,92 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5.2</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style="display: block; margin: 0; padding: 0; font: normal normal 11pt/150% Verdana,sans-serif; color: black; text-align: left;">
+    <p style="margin:0;padding:0;">
+        A string is a <strong>palindrome</strong> if it is the same reading from left to right and from right to left.&nbsp; For example, <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"I saw I was I"</strong> is palindromic.
+    </p>
+    <p style="margin:12pt 0 0 0;padding:0;">
+        Please write a function that takes a string as its only argument.&nbsp; The function tests whether the string is palindromic or not.&nbsp; The function returns <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>True</strong> if the string is palindromic; <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>False</strong> otherwise.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>The <strong>return type</strong> of the function should be <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>bool</strong> <span style="color:orangered;">(<strong style="color:red;">not</strong> <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:orangered;'>str</strong></span>)</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please see the examples below to better understand the expected function behavior.</p>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 1</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Argument
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>"I saw I was I"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>True</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>bool</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:14pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 2</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Argument
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>"race a car"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>False</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>bool</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style='margin:10pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please only complete the required function.&nbsp; Do <strong style="color:red;">not</strong> write a <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>main()</strong> program</span> or any <span style="text-decoration: line-through;color:black;">testing code</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;color:darkcyan;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please <strong>use your smart</strong> to find a solution to solve the problem.</p>
+</div>
+</body>
+</html>
