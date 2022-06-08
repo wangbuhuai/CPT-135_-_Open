@@ -1,0 +1,66 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4.3</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style="display: block; margin: 0; padding: 0; font: normal normal 11pt/150% Verdana,sans-serif; color: black; text-align: left;">
+    <p style="margin:0;padding: 1pt 0;background:lightcyan;text-align:center;">
+        Please complete Question <strong>2</strong> before completing this question.
+    </p>
+    <p style="margin:16pt 0 0 0; padding: 0;">Some integers are stored in a <strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;">list</strong> variable <strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;">my_list</strong>.</p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Initially, you do <strong style="color: red;">not</strong> know the number of integers in <strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;">my_list</strong>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;">my_list</strong> is <strong>guaranteed</strong> to have at least <strong>2</strong> integers with distinct values in it.</p>
+    <p style="margin: 12pt 0 0 0; padding: 0;">Please write some code to write the <strong>maximum value</strong> and <strong><span style="color:blue;">strict</span> second maximum value</strong> <span style="color: orangered;">(in this order)</span> in <strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;">my_list</strong> in the console.</p>
+    <p style="margin: 12pt 0 0 12pt; padding: 0; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>The two output values should be separated by a single space in the console.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Please see the examples below to better understand the expected program behavior and output format.</p>
+    <table style="border-collapse: collapse; border: none; margin: 10pt 0 0 12pt; line-height: normal;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: white; background: darkcyan;" colspan="2"><strong>Example 1</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white; width: 175px;">Values in <strong style="font-family: Consolas,monaco,monospace; font-size: 11.5pt;">my_list</strong></td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">[<strong>5</strong>, <strong>7</strong>, <strong>&minus;2</strong>, <strong>9</strong>, <strong>6</strong>]</td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;">Expected Output Values</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;"><strong>9</strong> <strong>7</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">Explanation</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">The maximum value in the list is <strong>9</strong>; the <strong style="color:blue;">strict</strong> second maximum value in the list is <strong>7</strong>.</td>
+        </tr>
+        </tbody>
+    </table>
+    <table style="border-collapse: collapse; border: none; margin: 14pt 0 0 12pt; line-height: normal;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: white; background: darkcyan;" colspan="2"><strong>Example 2</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white; width: 175px;">Values in <strong style="font-family: Consolas,monaco,monospace; font-size: 11.5pt;">my_list</strong></td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">[<strong>6</strong>, <strong>5</strong>, <strong>6</strong>, <strong>4</strong>]</td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;">Expected Output Values</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;"><strong>6</strong> <strong>5</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">Explanation</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">The maximum value in the list is <strong>6</strong>; the <strong style="color:blue;">strict</strong> second maximum value in the list is <strong>5</strong>.&nbsp; Although there are two elements with value <strong>6</strong> in the list, the <strong style="color:blue;">strict</strong> second maximum value should be strictly less than the maximum value.</td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 10pt 0 0 12pt; padding: 0; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>In this question, you can only use <strong>comparison operators</strong>; you <strong style="color: red;">cannot</strong> use <span style="text-decoration: line-through;color:black;"><strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;"><span style="color:blue;">max</span>()</strong></span>, <span style="text-decoration: line-through;color:black;"><strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;"><span style="color:blue;">min</span>()</strong></span>, <span style="text-decoration: line-through;color:black;"><strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;"><span style="color:blue;">append</span>()</strong></span>, <span style="text-decoration: line-through;color:black;"><strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;"><span style="color:blue;">pop</span>()</strong></span>, <span style="text-decoration: line-through;color:black;"><strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;"><span style="color:blue;">remove</span>()</strong></span>, or <span style="text-decoration: line-through;color:black;"><strong style="font-family: Consolas,monaco,monospace; font-size: 12.5pt;"><span style="color:blue;">count</span>()</strong></span> functions or methods.</p>
+    <p style="margin: 10pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your can assume that the values stored in <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>my_list</strong> are always valid.&nbsp; You do <strong style="color: red;">not</strong> need to worry about <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">invalid values</span></span> or <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">error handling</span></span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your program will be tested <span style="color:orangered;">(graded)</span> using multiple sets of valid input values.&nbsp; As long as the input values are valid, your program should always generate correct output values.</p>
+</div>
+</body>
+</html>
