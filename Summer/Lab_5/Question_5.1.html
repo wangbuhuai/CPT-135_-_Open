@@ -1,0 +1,95 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5.1</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style="display: block; margin: 0; padding: 0; font: normal normal 11pt/150% Verdana,sans-serif; color: black; text-align: left;">
+    <p style="margin:0;padding:0;">
+        <strong>Anagrams</strong> are words or phrase you spell by rearranging the letters of another word or phrase.&nbsp; A few well-known anagrams are listed below for you to better understand the concept.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"study"</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"dusty"</strong></p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"eleven plus two"</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"twelve plus one"</strong></p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"bad credit"</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"debit card"</strong></p>
+    <p style="margin:12pt 0 0 0;padding:0;">
+        Please write a function that takes two strings, <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>s</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>t</strong>, as arguments.&nbsp; The function tests whether <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>s</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>t</strong> are anagrams or not.&nbsp; The function returns <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>True</strong> if <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>s</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>t</strong> are anagrams; <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>False</strong> otherwise.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>The <strong>return type</strong> of the function should be <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>bool</strong> <span style="color:orangered;">(<strong style="color:red;">not</strong> <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:orangered;'>str</strong></span>)</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please see the examples below to better understand the expected function behavior.</p>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 1</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Arguments
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>s = "study"<br>t = "dusty"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>True</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>bool</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:14pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 2</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Arguments
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>s = "car"<br>t = "rat"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>False</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>bool</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style='margin:10pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please only complete the required function.&nbsp; Do <strong style="color:red;">not</strong> write a <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>main()</strong> program</span> or any <span style="text-decoration: line-through;color:black;">testing code</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;color:darkcyan;'><span style='display:inline-block;width:6pt;'>&bull;</span>(Hint) Will <strong>sorting</strong> help to solve this problem?</p>
+</div>
+</body>
+</html>
