@@ -1,0 +1,125 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4.5 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style='display:block;margin:0;padding:0;font:normal normal 11pt/150% Verdana,sans-serif;color:black;text-align:left;'>
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 5 - Question 1</strong> <span style="color:orangered;">(<strong>4</strong> Points)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin:0;padding:0;">
+        <strong>Anagrams</strong> are words or phrase you spell by rearranging the letters of another word or phrase.&nbsp; A few well-known anagrams are listed below for you to better understand the concept.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"study"</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"dusty"</strong></p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"eleven plus two"</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"twelve plus one"</strong></p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"bad credit"</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>"debit card"</strong></p>
+    <p style="margin:12pt 0 0 0;padding:0;">
+        Please write a function that takes two strings, <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>s</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>t</strong>, as arguments.&nbsp; The function tests whether <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>s</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>t</strong> are anagrams or not.&nbsp; The function returns <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>True</strong> if <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>s</strong> and <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>t</strong> are anagrams; <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>False</strong> otherwise.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>The <strong>return type</strong> of the function should be <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:blue;'>bool</strong> <span style="color:orangered;">(<strong style="color:red;">not</strong> <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;color:orangered;'>str</strong></span>)</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please see the examples below to better understand the expected function behavior.</p>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 1</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Arguments
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>s = "study"<br>t = "dusty"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>True</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>bool</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:14pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 2</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Arguments
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;'>s = "car"<br>t = "rat"</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:#ffff99;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>False</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>bool</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style='margin:10pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please only complete the required function.&nbsp; Do <strong style="color:red;">not</strong> write a <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>main()</strong> program</span> or any <span style="text-decoration: line-through;color:black;">testing code</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;color:darkcyan;'><span style='display:inline-block;width:6pt;'>&bull;</span>(Hint) Will <strong>sorting</strong> help to solve this problem?</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'>
+                <span style="color:#0033b3;">def </span><span style="color:#00627a;">are_anagrams</span><span style="color:#080808;">(s, t):<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Tests whether two strings are anagrams<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param s: first string to test<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type s: str<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param t: second string to test<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type t: str<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: True if the two strings are anagrams; False otherwise<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :rtype: bool<br />&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">return </span><span style="color:navy;">sorted</span><span style="color:#080808;">(s) == </span><span style="color:navy;">sorted</span><span style="color:#080808;">(t)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
