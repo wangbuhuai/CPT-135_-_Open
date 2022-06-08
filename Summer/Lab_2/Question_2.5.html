@@ -1,0 +1,80 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-07 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 2.5</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style="display: block; margin: 0; padding: 0; font: normal normal 11pt/150% Verdana,sans-serif; color: black; text-align: left;">
+    <p style="margin: 0; padding: 0;">Please write a Python program which has the following functionality in execution:</p>
+    <p style="margin: 12pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Ask the user to enter a <strong>4</strong>-digit positive integer.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Using all the digits in the user input integer, find the <strong>smallest permutation</strong> so that the constructed integer is the smallest.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Show the integer constructed by the <strong>smallest permutation</strong> of all the digits in the user input integer in the console.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;"><span style="display: inline-block; width: 6pt;">&bull;</span>Please see the examples below to better understand the expected program behavior.</p>
+    <table style="border-collapse: collapse; border: none; margin: 10pt 0 0 12pt; line-height: normal;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: white; background: darkcyan;" colspan="2"><strong>Example 1</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">User Input Integer</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;"><strong>6328</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99; width: 225px;">Expected Program Output Value</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;"><strong>2368</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">Explanation</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">The digits in the user input integer are <strong>6</strong>, <strong>3</strong>, <strong>2</strong>, and <strong>8</strong>.&nbsp; The <strong>smallest permutation</strong> of the digits is <strong>2368</strong>.</td>
+        </tr>
+        </tbody>
+    </table>
+    <table style="border-collapse: collapse; border: none; margin: 14pt 0 0 12pt; line-height: normal;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: white; background: darkcyan;" colspan="2"><strong>Example 2</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">User Input Integer</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;"><strong>3131</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99; width: 225px;">Expected Program Output Value</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;"><strong>1133</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">Explanation</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">The digits in the user input integer are <strong>3</strong>, <strong>1</strong>, <strong>3</strong>, and <strong>1</strong>.&nbsp; The <strong>smallest permutation</strong> of the digits is <strong>1133</strong>.</td>
+        </tr>
+        </tbody>
+    </table>
+    <table style="border-collapse: collapse; border: none; margin: 14pt 0 0 12pt; line-height: normal;">
+        <tbody>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: white; background: darkcyan;" colspan="2"><strong>Example 3</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">User Input Integer</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;"><strong>6060</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99; width: 225px;">Expected Program Output Value</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: #ffff99;"><strong>66</strong></td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">Explanation</td>
+            <td style="border: 2px solid darkcyan; padding: 3pt 6pt; vertical-align: middle; text-align: left; font-size: 10pt; color: black; background: white;">The digits in the user input integer are <strong>6</strong>, <strong>0</strong>, <strong>6</strong>, and <strong>0</strong>.&nbsp; The <strong>smallest permutation</strong> of the digits is <strong>0066</strong>.&nbsp; <span style="color: orangered;">The integer constructed by this permutation is <strong>66</strong>.</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin: 10pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your can assume that the user will always provide valid input values.&nbsp; You do <strong style="color: red;">not</strong> need to worry about <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">invalid input</span></span> or <span style="text-decoration: line-through;color:black;"><span style="color:darkcyan;">error handling</span></span>.</p>
+    <p style="margin: 6pt 0 0 12pt; padding: 0; font-size: 11pt; text-indent: -6pt;color:darkcyan;"><span style="display: inline-block; width: 6pt;">&bull;</span>Your program will be tested <span style="color:orangered;">(graded)</span> using multiple sets of valid input values.&nbsp; As long as the input values are valid, your program should always generate correct output values.</p>
+</div>
+</body>
+</html>
