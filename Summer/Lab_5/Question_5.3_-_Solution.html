@@ -1,0 +1,139 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4.5 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style='display:block;margin:0;padding:0;font:normal normal 11pt/150% Verdana,sans-serif;color:black;text-align:left;'>
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 5 - Question 3</strong> <span style="color:orangered;">(<strong>4</strong> Points)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin:0;padding:0;">
+        The <strong>majority element</strong> in a list is the element that appears more than half times in the list.&nbsp; For example, in list [<strong>5</strong>, <strong>6</strong>, <strong>&minus;3</strong>, <strong>5</strong>, <strong>5</strong>, <strong>6</strong>, <strong>5</strong>, <strong>5</strong>, <strong>3</strong>], element <strong>5</strong> appears <strong>5</strong> times, which is more than half of the size of the list <span style="color:orangered;">(<strong>9</strong>)</span>.&nbsp; Therefore, <strong>5</strong> is the majority element in this list.
+    </p>
+    <p style="margin:12pt 0 0 0;padding:0;">
+        Please write a function that takes a list of integers as its only argument.&nbsp; The function finds and returns the majority element in the list.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>You <strong style="color:red;">cannot</strong> assume <span style="color:orangered;">(or guess)</span> the size of the input list.&nbsp; In other words, no matter how many elements are stored in the list, your function should correctly find the majority element in it.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Although <strong style="color:red;">not</strong> every list has a majority element, in this question, you can assume that a majority element always exists in the input list.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please see the examples below to better understand the expected function behavior.</p>
+    <table style='border-collapse:collapse;border:none;margin:10pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 1</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Argument
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>5</strong>, <strong>6</strong>, <strong>&minus;3</strong>, <strong>5</strong>, <strong>5</strong>, <strong>6</strong>, <strong>5</strong>, <strong>5</strong>, <strong>3</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong>5</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;width:225px;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>int</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                The size of the list is <strong>9</strong>.&nbsp; Element <strong>5</strong> appears <strong>5</strong> times in the list, which is more than half of the size of the list.&nbsp; Therefore, the majority element is <strong>5</strong>.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:14pt 0 0 12pt;line-height:normal;'>
+        <tbody>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:white;background:darkcyan;' colspan='2'>
+                <strong>Example 2</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Function Argument
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                [<strong>0</strong>, <strong>2</strong>, <strong>&minus;2</strong>, <strong>2</strong>, <strong>2</strong>, <strong>4</strong>, <strong>3</strong>, <strong>2</strong>, <strong>2</strong>, <strong>2</strong>, <strong>2</strong>, <strong>0</strong>]
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;width:225px;'>
+                Expected Function Return Value
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:#ffff99;'>
+                <strong>2</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;width:225px;'>
+                Expected Function Return Type
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                <strong style='font-family:Consolas,monaco,monospace;font-size:11.5pt;color:blue;'>int</strong>
+            </td>
+        </tr>
+        <tr>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                Explanation
+            </td>
+            <td style='border:2px solid darkcyan;padding:3pt 6pt;vertical-align:middle;text-align:left;font-size:10pt;color:black;background:white;'>
+                The size of the list is <strong>12</strong>.&nbsp; Element <strong>2</strong> appears <strong>7</strong> times in the list, which is more than half of the size of the list.&nbsp; Therefore, the majority element is <strong>2</strong>.
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style='margin:10pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please only complete the required function.&nbsp; Do <strong style="color:red;">not</strong> write a <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>main()</strong> program</span> or any <span style="text-decoration: line-through;color:black;">testing code</span>.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;color:darkcyan;'><span style='display:inline-block;width:6pt;'>&bull;</span>(Hint) If the list is <strong style="color:red;">unsorted</strong>, then is the majority element always the first element?&nbsp; Is the majority element always the last element?&nbsp; Is the majority element always the <em>middle</em> element?&nbsp; What if the list is <strong>sorted</strong>?</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'>
+                <span style="color:#0033b3;">def </span><span style="color:#00627a;">majority_element</span><span style="color:#080808;">(li):<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Finds the majority element for a list of integers<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param li: non-empty list guaranteed to have a majority element<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type li: List[int]<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: majority element of the list<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :rtype: int<br />&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp; # For sorted list, majority element is always the middle element.<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">return </span><span style="color:navy;">sorted</span><span style="color:#080808;">(li)[</span><span style="color:navy;">len</span><span style="color:#080808;">(li) // </span><span style="color:#1750eb;">2</span><span style="color:#080808;">]</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
