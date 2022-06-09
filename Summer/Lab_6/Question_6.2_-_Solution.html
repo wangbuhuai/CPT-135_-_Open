@@ -1,0 +1,67 @@
+<!-- Created by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+<!-- Last updated by Dayu Wang (dwang@stchas.edu) on 2022-06-08 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 6.1 - Solution</title>
+</head>
+<body style='display:block;margin:0 auto;padding:0;width:100%;'>
+<div style='display:block;margin:0;padding:0;font:normal normal 11pt/150% Verdana,sans-serif;color:black;text-align:left;'>
+    <table style='border-collapse:collapse;border:none;margin:0 0 16pt 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid #7f1428;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:#7f1428;background:transparent;'>
+                <strong>Lab 6 - Question 2</strong> <span style="color:orangered;">(<strong>4</strong> Points)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin:0;padding:0;">
+        Python class <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>Pair</strong> is defined below:
+    </p>
+    <table style='border-collapse:collapse;border:none;margin:16pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50<br>51<br>52<br>53<br>54<br>55<br>56
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'>
+                <span style="color:#0033b3;">class </span><span style="">Pair</span><span style="color:#080808;">:<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># Constructor<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">def </span><span style="color:#b200b2;">__init__</span><span style="color:#080808;">(</span><span style="color:#94558d;">self</span><span style="color:#080808;">, first=</span><span style="color:#067d17;">''</span><span style="color:#080808;">, second=</span><span style="color:#1750eb;">0</span><span style="color:#080808;">):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Constructs a Pair object<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param first: first value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type first: str<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param second: second value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type second: int<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: None<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Data fields<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#94558d;">self</span><span style="color:#080808;">._first = first<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#94558d;">self</span><span style="color:#080808;">._second = second<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># Getters<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">def </span><span style="color:#00627a;">get_first</span><span style="color:#080808;">(</span><span style="color:#94558d;">self</span><span style="color:#080808;">):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Returns the first value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: first value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :rtype: str<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">return </span><span style="color:#94558d;">self</span><span style="color:#080808;">._first<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">def </span><span style="color:#00627a;">get_second</span><span style="color:#080808;">(</span><span style="color:#94558d;">self</span><span style="color:#080808;">):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Returns the second value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: second value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :rtype: int<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">return </span><span style="color:#94558d;">self</span><span style="color:#080808;">._second<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># Setters<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">def </span><span style="color:#00627a;">set_first</span><span style="color:#080808;">(</span><span style="color:#94558d;">self</span><span style="color:#080808;">, first):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Updates the first value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param first: updated first value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type first: str<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: None<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#94558d;">self</span><span style="color:#080808;">._first = first<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">def </span><span style="color:#00627a;">set_second</span><span style="color:#080808;">(</span><span style="color:#94558d;">self</span><span style="color:#080808;">, second):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Updates the second value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param second: updated second value in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type second: int<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: None<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#94558d;">self</span><span style="color:#080808;">._second = second<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;"># Method<br /><br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">def </span><span style="color:#b200b2;">__str__</span><span style="color:#080808;">(</span><span style="color:#94558d;">self</span><span style="color:#080808;">):<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Customizes the output format of the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: a string representing the output format of the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :rtype: str<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">return </span><span style="color:#067d17;">"(%s, %d)" </span><span style="color:#080808;">% (</span><span style="color:#94558d;">self</span><span style="color:#080808;">.get_first(), </span><span style="color:#94558d;">self</span><span style="color:#080808;">.get_second())</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p style="margin:16pt 0 0 0;padding:0;">
+        In another file <span style="color:orangered;">(outside the class)</span>, please write a function, <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>make_pair()</strong>, that groups a string and an integer into a <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>Pair</strong> object.
+    </p>
+    <p style='margin:12pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>The function takes a string and an integer <span style="color:orangered;">(in that order)</span> as arguments.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>The function returns a <strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>Pair</strong> object formed by the values of the string and integer.</p>
+    <p style='margin:6pt 0 0 12pt;padding:0;font-size:11pt;text-indent:-6pt;'><span style='display:inline-block;width:6pt;'>&bull;</span>Please only complete the required function.&nbsp; Do <strong style="color:red;">not</strong> <span style="text-decoration: line-through;color:black;">rewrite the whole class again</span>.&nbsp; Do <strong style="color:red;">not</strong> write a <span style="text-decoration: line-through;color:black;"><strong style='font-family:Consolas,monaco,monospace;font-size:12.5pt;'>main()</strong> program</span> or any <span style="text-decoration: line-through;color:black;">testing code</span>.</p>
+    <table style='border-collapse:collapse;border:none;margin:24pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border:none;border-bottom:3px solid darkcyan;padding:0 0 1pt 0;vertical-align:middle;text-align:left;color:darkcyan;background:transparent;'>
+                <strong>Solution</strong>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table style='border-collapse:collapse;border:none;margin:20pt 0 0 0;line-height:normal;width:100%;white-space:nowrap;'>
+        <tbody>
+        <tr>
+            <td style='border-top:2px solid darkcyan;border-right:1px solid darkcyan;border-bottom:2px solid darkcyan;border-left:none;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:darkcyan;width:20px;background:transparent;'>
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10
+            </td>
+            <td style='border-top:2px solid darkcyan;border-right:none;border-bottom:2px solid darkcyan;border-left:1px solid darkcyan;padding:3pt 6pt;vertical-align:top;text-align:left;line-height:125%;font-family:Consolas,monaco,monospace;font-size:12pt;color:black;background:transparent;'>
+                <span style="color:#0033b3;">def </span><span style="color:#00627a;">make_pair</span><span style="color:#080808;">(first, second):<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#8c8c8c;">""" Forms a Pair object from a string and an integer<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param first: first value (string) in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type first: str<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :param second: second value (integer) in the pair<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :type second: int<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :return: a Pair object formed by the string and integer<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :rtype: Pair<br />&nbsp;&nbsp;&nbsp; """<br />&nbsp;&nbsp;&nbsp; </span><span style="color:#0033b3;">return </span><span style="color:#080808;">Pair(first, second)</span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
